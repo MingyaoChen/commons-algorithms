@@ -22,10 +22,6 @@ public class LongestCommonSequence {
         for (j = 0; j < m.length; j++) {
             m[j] = 0;
         }
-//        for ( int xx : m) {
-//            System.out.print(xx + " ");
-//        }
-//        System.out.println();
 
         for (i = 0; i < lenA; i++) {
             old = m[0];
@@ -40,12 +36,7 @@ public class LongestCommonSequence {
                 }
                 old = tnmp;
             }
-//            for ( int xx : m) {
-//                System.out.print(xx + " ");
-//            }
-//            System.out.println();
         }
-
         return m[lenB];
     }
 

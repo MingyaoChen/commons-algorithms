@@ -41,10 +41,10 @@ public class TermOccurrence implements Occurrence {
         termTire.format_print();
     }
 
-//    public static void main(String[] args) {
-//        TermOccurrence ocur = new TermOccurrence();
-//        List<String> terms = Arrays.asList("陈名耀", "陈名瑞", "陈名耀", "陈名瑞的儿子", "李沛宇", "李沛");
-//        ocur.addAll(terms);
-//        ocur.print();
-//    }
+    public static void main(String[] args) {
+        TermOccurrence ocur = new TermOccurrence();
+        List<String> terms = Arrays.asList("陈名耀", "陈名瑞", "陈名耀", "陈名瑞的儿子", "李沛宇", "李沛");
+        ocur.addAll(terms);
+        ocur.print();
+    }
 }

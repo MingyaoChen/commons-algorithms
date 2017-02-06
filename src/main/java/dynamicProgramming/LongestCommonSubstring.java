@@ -79,8 +79,8 @@ public class LongestCommonSubstring {
                 ++n;
             }
         }
-        System.out.printf("from %d of " + strA +" and %d of " +  strB +", compared for %d times\n", start1, start2, comparisons);
-        System.out.println(longest);
+//        System.out.printf("from %d of " + strA +" and %d of " +  strB +", compared for %d times\n", start1, start2, comparisons);
+//        System.out.println(longest);
         return longest;
     }
 
