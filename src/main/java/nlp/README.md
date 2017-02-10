@@ -1,0 +1,25 @@
+# NLP算法包
+
+### LDA
+```
+// 1. Load corpus from disk
+Corpus corpus = Corpus.load("data/mini");
+// 2. Create a LDA sampler
+LdaGibbsSampler ldaGibbsSampler = new LdaGibbsSampler(corpus.getDocument(), corpus.getVocabularySize());
+// 3. Train it
+ldaGibbsSampler.gibbs(10);
+// 4. The phi matrix is a LDA model, you can use LdaUtil to explain it.
+double[][] phi = ldaGibbsSampler.getPhi();
+Map<String, Double>[] topicMap = LdaUtil.translate(phi, corpus.getVocabulary(), 10);
+LdaUtil.explain(topicMap); 
+```
+
+### CRF
+```
+
+```
+
+### Document Summary
+```
+
+```
