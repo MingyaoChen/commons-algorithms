@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package commons;
 
 /**
  *  动态规划最长子串

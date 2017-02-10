@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package commons;
 
 /**
  * Created by mingyao on 1/22/17.

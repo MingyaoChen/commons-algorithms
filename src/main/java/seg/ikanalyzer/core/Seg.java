@@ -70,8 +70,8 @@ public class Seg {
         }
         return resultList;
     }
-//    public static void main(String args[]) {
-//        System.out.println(Seg.segAsString("我爱中国天安门"));
-//    }
+    public static void main(String args[]) {
+        System.out.println(Seg.segAsString("杭州数澜科技"));
+    }
 
 }
