@@ -6,9 +6,7 @@ package commons;
  */
 public class LongestCommonSubstring {
 
-    static int compute(String strA, String strB) {
-        char[] str1 = strA.toCharArray();
-        char[] str2=  strB.toCharArray();
+    static int compute(char[] str1, char[] str2) {
         int size1 = str1.length;
         int size2 = str2.length;
         if (size1 == 0 || size2 == 0) return 0;
@@ -94,8 +92,8 @@ public class LongestCommonSubstring {
     }
 
     public static void main(String args[]) {
-        String A = "直肠脱垂";
-        String B = "直肠粘膜脱垂";
-        LongestCommonSubstring.compute(B, A);
+        char[] A = "直肠脱垂".toCharArray();
+        char[] B = "直肠粘膜脱垂".toCharArray();
+        System.out.println(LongestCommonSubstring.compute(B, A));
     }
 }
