@@ -49,9 +49,11 @@ public class KMeans {
         }
     }
 
-    public void compute() {
+    public List<String> compute() {
         boolean finished = false;
         int iteration = 0;
+        List<String> main = new ArrayList<String>();
+
         while(! finished) {
             clearCluster();
             assignCluster();
@@ -74,10 +76,11 @@ public class KMeans {
                 finished = true;
                 for (Point point: points) {
                     if (point.getCluster() == 0 ) continue;
-                    System.out.println(point.getTag());
+                    main.add(point.getTag());
                 }
             }
         }
+        return main;
     }
 
     private void clearCluster() {

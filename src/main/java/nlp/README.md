@@ -30,10 +30,15 @@ for (String sentence : senteneces) {
 }
 
 ```
+- 基于LSTM的文本摘要提取 基于论文: [A Neural Attention Model for Abstractive Sentence Summarization](https://arxiv.org/abs/1509.00685)
+```
+待续
+```
+
 ### 文档向量化
 - TFIDF
-矩阵使用Matrix Toolkit Java包提供数据结构进行存储
-[Matrix Toolkit Java](https://github.com/fommil/matrix-toolkits-java)
+矩阵使用
+[Matrix Toolkit Java](https://github.com/fommil/matrix-toolkits-java)包提供数据结构进行存储
 ```
 Corpus corpus = Corpus.getSample();
 TFIDF tfidf = new TFIDF(corpus);
@@ -44,5 +49,5 @@ VectorUtility.printMat(lsm);
 
 ### CRF
 ```
-
+待续
 ```

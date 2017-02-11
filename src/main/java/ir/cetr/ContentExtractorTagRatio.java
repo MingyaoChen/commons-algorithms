@@ -90,7 +90,7 @@ public class ContentExtractorTagRatio {
         return trList;
     }
 
-    public static void compute(String... arrs) {
+    public static List<String> compute(String... arrs) {
         if (INSTANCE == null) {
             synchronized (ContentExtractorTagRatio.class) {
                 if (INSTANCE == null) {
@@ -112,7 +112,7 @@ public class ContentExtractorTagRatio {
                 .setIteration(15)
                 .source(points)
                 .build();
-        kmeans.compute();
+        return kmeans.compute();
     }
 
     /**
@@ -124,7 +124,7 @@ public class ContentExtractorTagRatio {
      * @throws Exception
      */
     public static void main(String args[]) throws Exception {
-        Document doc = Jsoup.parse(new URL("http://www.ccgp-jiangsu.gov.cn/pub/jszfcg/cgxx/cggg/201701/t20170120_116464.html"), 10000);
+        Document doc = Jsoup.parse(new URL("http://www.toutiao.com/a6384575287664836865/"), 10000);
         Whitelist wl = Whitelist.relaxed();
         wl.addAttributes(":all", "id", "class", "data");
 
@@ -135,6 +135,9 @@ public class ContentExtractorTagRatio {
         doc = c.clean(doc);
         String[] arrs = doc.outputSettings(os).toString().split("\\r?\\n");
 
-        ContentExtractorTagRatio.compute(arrs);
+        List<String> bodyArea = ContentExtractorTagRatio.compute(arrs);
+        for (String line: bodyArea) {
+            System.out.println(line);
+        }
     }
 }
