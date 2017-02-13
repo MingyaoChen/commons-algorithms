@@ -19,3 +19,11 @@ System.out.print(LongestCommonSequence.compute(B, A));
 // 最小编辑距离
 EditDistance.compute(a, b)
 ```
+- 快速排序
+```
+double[] data = { 88.0, 0.2,0.8, 0.55, 0.89, 100.0, 90.0}; // 测试数据
+QuickSort.sort(data);
+for (double d : data) {
+    System.out.print(d + ", ");
+}
+```
