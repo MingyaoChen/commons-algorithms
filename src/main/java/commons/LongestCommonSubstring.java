@@ -6,7 +6,7 @@ package commons;
  */
 public class LongestCommonSubstring {
 
-    static int compute(char[] str1, char[] str2) {
+    public static int compute(char[] str1, char[] str2) {
         int size1 = str1.length;
         int size2 = str2.length;
         if (size1 == 0 || size2 == 0) return 0;

@@ -5,7 +5,7 @@ package commons;
  */
 public class LongestCommonSequence {
 
-    static int compute(char[] a, char[] b) {
+    public static int compute(char[] a, char[] b) {
         char[] tmp;
         if (a.length < b.length) {
             tmp = b;
