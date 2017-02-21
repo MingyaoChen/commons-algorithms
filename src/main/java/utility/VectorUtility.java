@@ -55,13 +55,41 @@ public class VectorUtility {
     }
 
     /**
+     * 向量均值
+     * @param vec
+     * @return
+     */
+    public static double mean(double[] vec) {
+        double mean = 0.0;
+        for (double item : vec) {
+            mean += item;
+        }
+        return mean / vec.length;
+    }
+
+    /**
+     * 向量方差
+     * @param vec
+     * @return
+     */
+    public static double variance(double[] vec) {
+        double var = 0.0;
+        double mean = mean(vec);
+
+        for (double item : vec) {
+            var += (item - mean) * ( item - mean );
+        }
+        return var/ vec.length;
+    }
+
+    /**
      * Cosine 相似度
      *
      * @param a
      * @param b
      * @return
      */
-    private static double cosine(double[] a, double[] b) {
+    public static double cosine(double[] a, double[] b) {
         if (a.length != b.length) new Exception();
         double result = 0.0;
         double up = 0.0;
@@ -75,6 +103,16 @@ public class VectorUtility {
         return up / (Math.sqrt(left) * Math.sqrt(right));
     }
 
+    public static double euclid(double[] a, double[] b) {
+        if (a.length != b.length) new Exception();
+        double value = 0.0;
+        for ( int i = 0; i < a.length; i ++) {
+            double c = a[i] - b[i];
+            value += (c * c);
+        }
+        return Math.sqrt(value);
+    }
+
     public static List<Integer> intArray2List(int[] ints) {
         List<Integer> intList = new ArrayList<Integer>();
         for (int index = 0; index < ints.length; index++)
@@ -83,6 +121,17 @@ public class VectorUtility {
         }
         return intList;
     }
+
+    public static List<Double> doubleArray2List(double[] ints) {
+        List<Double> intList = new ArrayList<>();
+        for (int index = 0; index < ints.length; index++)
+        {
+            intList.add(ints[index]);
+        }
+        return intList;
+    }
+
+
 
 
 }
